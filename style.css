@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* Custom properties */
+/* ================== */
+
+:root {
+  /* --ff-main: 'Manrope', sans-serif;
+
+  --fw-extra-light: 200;
+  --fw-medium: 500;
+  --fw-extra-bold: 800; */
+
+  --fs-07: 0.438rem;
+  --fs-08: 0.5em;
+  --fs-09: 0.563em;
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-60: 3.75rem;
+  --fs-64: 4rem;
+  --fs-72: 4.5rem;
+  --fs-80: 5rem;
+
+  /* --clr-cyan: hsla(178, 80%, 58%, 1);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-blue: hsla(230, 60%, 8%, 1);
+  --clr-deep-blue: hsla(206, 84%, 22%, 1);
+  --clr-gray: hsla(225, 14%, 53%, 1);
+  --clr-red-error: hsla(343, 100%, 58%, 1); */
+}
+
+body {
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-gray);
+  font-family: var(--ff-main);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-extra-light);
+  line-height: 1.625;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================== */
+/* Typography */
+/* ================== */
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
