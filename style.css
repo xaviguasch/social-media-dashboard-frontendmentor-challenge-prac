@@ -47,10 +47,13 @@
 
   --clr-facebook: hsl(208, 92%, 53%);
   --clr-twitter: hsl(203, 89%, 53%);
-  --clr-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --clr-instagram-yellow: hsl(37, 97%, 70%);
+  --clr-instagram-pink: hsl(329, 70%, 58%);
   --clr-youtube: hsl(348, 97%, 39%);
 
-  --clr-dark-theme-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --clr-dark-theme-toggle-blue: hsl(210, 78%, 56%);
+  --clr-dark-theme-toggle-green: hsl(146, 68%, 55%);
+
   --clr-light-theme-toggle: hsl(230, 22%, 74%);
 
   /* Dark theme */
@@ -87,6 +90,36 @@ img {
 /* ================== */
 
 .title {
+  font-size: var(--fs-24);
+  color: var(--clr-very-dark-blue-bg);
+}
+
+.handle {
+  font-size: var(--fs-12);
+}
+
+.num-followers {
+  font-size: var(--fs-56);
+  color: var(--clr-very-dark-blue);
+}
+
+.followers-subtitle {
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  font-weight: var(--fw-regular);
+  letter-spacing: 5px;
+}
+
+.daily-num {
+  font-size: var(--fs-12);
+}
+
+.stats-title {
+  font-size: var(--fs-24);
+}
+
+.number {
+  font-size: var(--fs-32);
 }
 
 /* ================== */
@@ -97,9 +130,231 @@ img {
 /* Utility styles */
 /* ================== */
 
+.positive {
+  color: var(--clr-lime-green);
+}
+
+.negative {
+  color: var(--clr-bright-red);
+}
+
+.facebook {
+  border-top: 4px solid var(--clr-facebook);
+}
+.twitter {
+  border-top: 4px solid var(--clr-twitter);
+}
+.instagram {
+  border-style: solid;
+  border-width: 4px;
+  border-image: linear-gradient(
+      to right,
+      var(--clr-instagram-yellow),
+      var(--clr-instagram-pink)
+    )
+    1;
+
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.youtube {
+  border-top: 4px solid var(--clr-youtube);
+}
+
+/* ================== */
+/* SECTIONS */
+/* ================== */
+
+.wrapper {
+  padding: 2em 1.5em 0.5em;
+
+  position: relative;
+}
+
+.wrapper::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+  background: var(--clr-very-pale-blue);
+  z-index: -1;
+  border-radius: 2em;
+}
+
+/* Header */
+.title-area {
+  position: relative;
+  padding-bottom: 1.25em;
+}
+
+.title-area::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid var(--clr-dark-grayish-blue);
+}
+
+.switch-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 1em;
+}
+
+.switch {
+  background-color: var(--clr-light-theme-toggle);
+
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  width: 40px;
+}
+
+.switch:hover,
+.switch:focus {
+  background: linear-gradient(
+    to right,
+    var(--clr-dark-theme-toggle-blue),
+    var(--clr-dark-theme-toggle-green)
+  );
+}
+
+.switch input {
+  /* Position */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  appearance: none;
+  cursor: pointer;
+}
+
+.switch .slider {
+  /* Position */
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  border-radius: 50%;
+  background-color: var(--clr-white-bg);
+  width: 16px;
+  height: 16px;
+
+  /* Animations */
+  transition: all 0.5s;
+}
+
+.switch input:checked + .slider {
+  transform: translateX(18px);
+}
+
+/* Follower stats */
+.follower-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+
+  padding: 2em 0;
+}
+
+.btn-card {
+  width: 100%;
+  border-radius: 0.4em;
+  background: var(--clr-light-grayish-blue);
+  padding: 1.75em;
+}
+
+.card-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.platform-area,
+.dailies-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.platform-area .logo {
+  padding-top: 0.25em;
+}
+
+.num-followers {
+  margin-bottom: -0.25em;
+}
+
+.followers-subtitle {
+  text-align: center;
+}
+
+.dailies-area {
+  margin-top: 1em;
+  gap: 0.25em;
+}
+
+.dailies-area .icon {
+  padding-bottom: 0.5em;
+}
+
+/* View Stats */
+
+.view-stats {
+  margin-top: 1.5em;
+}
+
+.stats-cards-area {
+  margin-top: 1.5em;
+}
+
+.card-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1em;
+
+  padding: 1.5em 2em 1em;
+}
+
+.card-b .platform {
+  margin-top: -0.5em;
+}
+
+.card-b .number {
+  margin-top: 0.5em;
+}
+
+.card-b .logo {
+  text-align: right;
+}
+
+.card-b .dailies-area {
+  margin-top: 2em;
+}
+
+.footer-signature {
+  margin-top: 3em;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
+  font-weight: var(--fw-regular);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
