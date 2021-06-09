@@ -67,6 +67,7 @@
   --clr-white-bg: hsl(0, 0%, 100%);
   --clr-very-pale-blue: hsl(225, 100%, 98%);
   --clr-light-grayish-blue: hsl(227, 47%, 96%);
+  --clr-light-grayish-blue-hover: hsl(228, 45%, 91%);
   --clr-dark-grayish-blue: hsl(228, 12%, 44%);
   --clr-very-dark-blue: hsl(230, 17%, 14%);
 }
@@ -120,6 +121,7 @@ img {
 
 .number {
   font-size: var(--fs-32);
+  color: var(--clr-very-dark-blue);
 }
 
 /* ================== */
@@ -205,6 +207,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1em;
 
   padding-top: 1em;
 }
@@ -276,6 +279,12 @@ img {
   border-radius: 0.4em;
   background: var(--clr-light-grayish-blue);
   padding: 1.75em;
+}
+
+.btn-card:hover,
+.btn-card:active {
+  background: var(--clr-light-grayish-blue-hover);
+  cursor: pointer;
 }
 
 .card-a {
@@ -361,4 +370,60 @@ img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Desktop */
+@media (min-width: 1100px) {
+  /* Typograpny */
+  .title {
+    font-size: var(--fs-28);
+  }
+
+  /* Utility classes */
+  .wrapper::before {
+    height: 244px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title-area::after {
+    content: none;
+  }
+
+  .switch-area {
+    padding-top: 0em;
+  }
+
+  /* Follower stats */
+  .follower-stats {
+    flex-direction: row;
+
+    gap: 2em;
+
+    padding: 2em 0;
+  }
+
+  .stats-cards-area {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .card-b {
+    max-width: 254px;
+  }
 }
