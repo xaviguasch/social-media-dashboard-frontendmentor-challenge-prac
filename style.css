@@ -81,6 +81,10 @@ body {
   line-height: 1.625;
   text-align: left;
 }
+/* Dark mode */
+body.dark {
+  background-color: var(--clr-very-dark-blue-bg);
+}
 
 img {
   max-width: 100%;
@@ -122,6 +126,22 @@ img {
 .number {
   font-size: var(--fs-32);
   color: var(--clr-very-dark-blue);
+}
+
+/* Dark mode */
+body.dark .title,
+body.dark .num-followers,
+body.dark .number,
+body.dark .stats-title {
+  color: var(--clr-white-text);
+}
+
+body.dark .subtitle,
+body.dark .switch-info,
+body.dark .followers-subtitle,
+body.dark .unit,
+body.dark .handle {
+  color: var(--clr-desaturated-blue);
 }
 
 /* ================== */
@@ -185,7 +205,8 @@ img {
   height: 235px;
   background: var(--clr-very-pale-blue);
   z-index: -1;
-  border-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
 }
 
 /* Header */
@@ -282,7 +303,7 @@ img {
 }
 
 .btn-card:hover,
-.btn-card:active {
+.btn-card:focus {
   background: var(--clr-light-grayish-blue-hover);
   cursor: pointer;
 }
@@ -372,6 +393,15 @@ img {
   color: hsl(228, 45%, 44%);
 }
 
+/* Dark mode */
+body.dark .wrapper::before {
+  background: var(--clr-very-dark-blue);
+}
+
+body.dark .btn-card {
+  background: var(--clr-dark-desaturated-blue);
+}
+
 /* ================== */
 /* MEDIA QUERIES */
 /* ================== */
@@ -425,5 +455,6 @@ img {
 
   .card-b {
     max-width: 254px;
+    margin-top: 0em;
   }
 }
