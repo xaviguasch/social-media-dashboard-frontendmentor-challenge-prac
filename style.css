@@ -95,8 +95,8 @@ img {
 /* ================== */
 
 .title {
-  font-size: var(--fs-24);
   color: var(--clr-very-dark-blue-bg);
+  font-size: var(--fs-24);
 }
 
 .handle {
@@ -104,15 +104,15 @@ img {
 }
 
 .num-followers {
-  font-size: var(--fs-56);
   color: var(--clr-very-dark-blue);
+  font-size: var(--fs-56);
 }
 
 .followers-subtitle {
   font-size: var(--fs-12);
-  text-transform: uppercase;
   font-weight: var(--fw-regular);
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 .daily-num {
@@ -124,8 +124,8 @@ img {
 }
 
 .number {
-  font-size: var(--fs-32);
   color: var(--clr-very-dark-blue);
+  font-size: var(--fs-32);
 }
 
 /* Dark mode */
@@ -198,33 +198,41 @@ body.dark .handle {
 .wrapper::before {
   content: '';
 
+  /* Position */
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 235px;
+
   background: var(--clr-very-pale-blue);
-  z-index: -1;
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
+  height: 235px;
+  width: 100%;
+  z-index: -1;
 }
 
 /* Header */
 .title-area {
+  /* Position */
   position: relative;
+
   padding-bottom: 1.25em;
 }
 
 .title-area::after {
   content: '';
-  width: 100%;
-  height: 2px;
+
+  /* Position */
   position: absolute;
   bottom: 0;
+
   border-bottom: 1px solid var(--clr-dark-grayish-blue);
+  height: 2px;
+  width: 100%;
 }
 
 .switch-area {
+  /* Flex */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,7 +243,6 @@ body.dark .handle {
 
 .switch {
   background-color: var(--clr-light-theme-toggle);
-
   border-radius: 20px;
   cursor: pointer;
   display: inline-block;
@@ -271,8 +278,8 @@ body.dark .handle {
 
   border-radius: 50%;
   background-color: var(--clr-white-bg);
-  width: 16px;
   height: 16px;
+  width: 16px;
 
   /* Animations */
   transition: all 0.5s;
@@ -285,6 +292,7 @@ body.dark .handle {
 /* Follower stats */
 .follower-stats,
 .stats-cards-area {
+  /* Flex */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,11 +303,11 @@ body.dark .handle {
 }
 
 .btn-card {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 0.4em;
   background: var(--clr-light-grayish-blue);
+  border-radius: 0.4em;
+  max-width: 400px;
   padding: 1.75em;
+  width: 100%;
 }
 
 .btn-card:hover,
@@ -309,6 +317,7 @@ body.dark .handle {
 }
 
 .card-a {
+  /* Flex */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -317,6 +326,7 @@ body.dark .handle {
 
 .platform-area,
 .dailies-area {
+  /* Flex */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,8 +346,8 @@ body.dark .handle {
 }
 
 .dailies-area {
-  margin-top: 1em;
   gap: 0.25em;
+  margin-top: 1em;
 }
 
 .dailies-area .icon {
@@ -351,17 +361,17 @@ body.dark .handle {
 }
 
 .stats-cards-area {
-  padding-top: 0.5em;
   gap: 0.5em;
+  padding-top: 0.5em;
 }
 
 .card-b {
+  /* Flex */
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   margin-top: 1em;
-
   padding: 1.5em 2em 1em;
 }
 
@@ -384,11 +394,13 @@ body.dark .handle {
 .footer-signature {
   margin-top: 3em;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
   font-weight: var(--fw-regular);
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -419,12 +431,13 @@ body.dark .btn-card {
   }
 
   .container {
-    max-width: 1100px;
     margin: 0 auto;
+    max-width: 1100px;
   }
 
   /* HEADER */
   .header {
+    /* Flex */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -440,14 +453,15 @@ body.dark .btn-card {
 
   /* Follower stats */
   .follower-stats {
+    /* Flex */
     flex-direction: row;
-
     gap: 2em;
 
     padding: 2em 0;
   }
 
   .stats-cards-area {
+    /* Flex */
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2em;
